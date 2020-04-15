@@ -1,0 +1,159 @@
+// USER VARIABLES SECTION
+
+// COLORS
+$blue: #6287B2
+$dark_blue: #1B2B47
+$white: #EBEFF3       
+
+$fontsize: 16px // Body Font Size
+$textcolor: #1B2B47 // Text Color
+$system: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
+$proxima-regular: ProximaNova, sans-serif
+$proxima-semibold: ProximaNova-Semibold, sans-serif
+$proxima-bold: ProximaNova-Bold, sans-serif
+$proxima-light: ProximaNova-Light, sans-serif
+$proxima-Extrabld: ProximaNova-Extrabld, sans-serif
+
+// Bootstrap compatible gutter variable => $gutter
+$grid-gutter-width: 20px
+$gutter: $grid-gutter-width
+$container-max-widths: (sm: 540px,lg: 952px,xl: 1055px)!default
+
+// IMPORT SECTION
+
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
+@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
+@import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
+@import 'node_modules/bootstrap/scss/_variables.scss' // Optional Bootstrap Grid
+@import 'node_modules/bootstrap/scss/_transitions.scss' // Optional Bootstrap Grid
+@import 'node_modules/bootstrap/scss/utilities/_sizing.scss' // Optional Bootstrap Utilites
+@import '/node_modules/owl.carousel/dist/assets/owl.carousel.min.css'
+@import '/node_modules/font-awesome/css/font-awesome.min.css'
+@import '/node_modules/magnific-popup/dist/magnific-popup.css'
+
+// FONTS LOAD SECTION
+
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		// font-display: swap // Uncomment to initially display system fonts
+		src: local($fname), url($furl) format('woff2')
+
+@include font('ProximaNova', normal, 400, '../fonts/src/ProximaNova-Regular.woff')
+@include font('ProximaNova-Semibold', normal, 600, '../fonts/src/ProximaNova-Semibold.woff')
+@include font('ProximaNova-Bold', normal, 700, '../fonts/src/ProximaNova-Bold.woff')
+@include font('ProximaNova-Light', normal, 200, '../fonts/src/ProximaNova-Light.woff')
+@include font('ProximaNova-Extrabld', normal, 800, '../fonts/src/ProximaNova-Extrabld.woff')
+@include font('FontAwesome', normal, 400, '../fonts/fontawesome-webfont.woff2')
+
+// GENERAL DOCUMENT STYLES
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $dark_blue
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+body
+	font-family: $proxima-regular
+	font-size: $fontsize
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	overflow-x: hidden
+	color: $textcolor
+	background-color: $white
+
+a
+	color: $dark_blue
+	font-family: $proxima-regular
+	&:hover,&:active,&:focus
+		color: $dark_blue
+		outline: none
+
+.container-fluid, .container-lg, .container-md, .container-sm, .container-xl
+	padding-right: 20px
+	padding-left: 20px
+
+.title1
+	font-family: $proxima-Extrabld
+	font-size: 48px
+
+.title2
+	font-family: $proxima-Extrabld
+	font-size: 48px
+
+.title3
+	font-family:  $proxima-semibold
+	font-size: 22px
+
+.text-center
+	text-align: center
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+input
+	background-color: #EBEFF3
+
+input
+	// position: relative
+	// padding: 6px 0px 6px 5px
+	// width: 100%
+	// outline: 0
+	// border: 0
+	// background-color: $white
+	// transition: box-shadow 150ms ease-out
+	// z-index: 100
+	// color: $dark_blue
+	// font-size: 16px
+	// font-family: $proxima-regular
+	&:focus 
+		box-shadow: 0 2px 0 0 $dark_blue
+	&:hover
+		background-color: #F2F3F4
+	&:active
+		background-color: $white
+
+input:focus:required:invalid, textarea:focus:required:invalid
+	color: #C93333
+	border-color: transparent!important
+
+.image-source-link 
+	color: #98C3D1
+
+
+.mfp-with-zoom .mfp-container,
+.mfp-with-zoom.mfp-bg 
+	opacity: 0
+	-webkit-backface-visibility: hidden
+	/* ideally, transition speed should match zoom duration */
+	-webkit-transition: all 0.3s ease-out 
+	-moz-transition: all 0.3s ease-out 
+	-o-transition: all 0.3s ease-out 
+	transition: all 0.3s ease-out
+
+
+.mfp-with-zoom.mfp-ready .mfp-container 
+		opacity: 1
+
+.mfp-with-zoom.mfp-ready.mfp-bg 
+		opacity: 0.8
+
+
+.mfp-with-zoom.mfp-removing .mfp-container, 
+.mfp-with-zoom.mfp-removing.mfp-bg 
+	opacity: 0
+

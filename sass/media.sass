@@ -1,0 +1,211 @@
+@import config
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
++media-breakpoint-down(lg)
+	.title1
+		font-size: 36px
+		line-height: 51px
+	.title3
+		font-size: 20px
+		line-height: 28px
+	.header-banner-img
+		left: -89px
+		top: 0
+		width: 121%
+	.header-banner
+		margin-top: 36px
+	.header-banner-title
+		margin-bottom: 10px
+	// .btn
+	// 	font-size: 12px
+	// 	padding: 6px 17px
+	.sect-title
+		font-size: 24px
+	.sect-desc
+		font-size: 14px
+	.about-item-text
+		font-size: 14px
+	.katalog_gallery-nav .katalog_gallery-prev, .katalog_gallery-nav .reviews_gallery-prev, .reviews_gallery-nav .katalog_gallery-prev, .reviews_gallery-nav .reviews_gallery-prev
+		left: -25px
+	.katalog_gallery-nav .katalog_gallery-next, .katalog_gallery-nav .reviews_gallery-next, .reviews_gallery-nav .katalog_gallery-next, .reviews_gallery-nav .reviews_gallery-next
+		right: -3px
+	.footer-logo
+	.footer-contact .footer-contact-opt
+		margin: 0 15px 0 0
+	.main
+		.sect-title
+			font-size: 24px
+			font-weight: normal
+			margin-bottom: 30px
+		.content
+			h1, h2, h3, h4, h5, h6
+				font-family: $proxima-semibold
+				font-weight: normal
+				font-size: 18px
+	.page-404
+		background-size: 60%
+	.product-card-price-text .btn
+		margin-top: 20px
+	.product-card-title
+		font-size: 36px
+	.product-card-price-text
+		font-size: 14px
+	.product-item
+		margin-bottom: 20px
+	.catalog-sidebar-title
+		font-size: 24px
+	.menu-menju-sajdbar-katalog-container ul li a
+		font-size: 24px
+	.catalog-sidebar-child-title
+		font-size: 18px
+// ≥992px
++media-breakpoint-down(md)
+	.header-banner-img
+		width: 100%
+		top: 0
+		left: 0
+	.form_price
+		background-image: none
+		padding-left: 0
+		min-height: auto
+		padding-bottom: 40px
+	.katalog_gallery .owl-item, .reviews_gallery .owl-item
+		transform: none
+	.katalog_gallery-nav .katalog_gallery-prev, .katalog_gallery-nav .reviews_gallery-prev, .reviews_gallery-nav .katalog_gallery-prev, .reviews_gallery-nav .reviews_gallery-prev
+		left: -60px
+	.katalog_gallery-nav .katalog_gallery-next, .katalog_gallery-nav .reviews_gallery-next, .reviews_gallery-nav .katalog_gallery-next, .reviews_gallery-nav .reviews_gallery-next
+		right: -35px
+	// .container-xl
+	// 	max-width: 952px
+	// 	padding-right: 0px
+	// 	padding-left: 0px
+
+
+// ≥768px
++media-breakpoint-down(sm)
+	.about-item.right-img
+		.about-item-img
+			margin-top: 70px
+		.about-item-text
+			margin-top: 30px
+	.about-item.left-img
+		.about-item-text
+			margin-top: 30px
+	.about .sect-desc
+		margin-bottom: 40px
+	.sect-title
+		font-size: 20px!important
+	.sect-desc
+		font-size: 14px!important
+	.form_price 
+		.form_price-question 
+			label
+				margin: 15px 15px
+	.form_price .form_price_title
+		font-size: 20px
+	.projects
+		margin: 0
+		padding: 0
+	.contact
+		padding: 40px 0
+		height: auto
+		.sect-title
+			margin-bottom: 40px
+		.contact-text
+			margin-bottom: 30px
+	.footer-contact .footer-contact-opt
+		margin: 0 50px 0 0
+	.main
+		.sect-title
+			font-size: 20px
+			font-weight: normal
+			margin-bottom: 30px
+		.content
+			h1, h2, h3, h4, h5, h6
+				font-family: $proxima-semibold
+				font-weight: normal
+				font-size: 16px
+	.page-404
+		background-size: 60%
+	.btn
+		width: 100%
+		text-align: center
+	.breadcrumbs
+		margin-top: 20px
+	.product-card-price
+		right: 0
+		top: 0
+		left: unset
+		padding-top: 14px
+	.product-card-img
+		margin-bottom: 20px
+	.form_price .form_price-buttons .btn
+		margin: 0 0 20px 0
+	.form_price
+		padding-left: 20px
+		padding-right: 20px
+	.catalog-banner-slide-text
+		margin: 40px 28px
+	.catalog-sidebar-title
+		font-size: 18px
+	.menu-menju-sajdbar-katalog-container ul li a
+		font-size: 18px
+	.catalog-sidebar-child-title
+		font-size: 16px
+	.catalog-sidebar-mobile-title
+		font-size: 20px
+// ≥576px
++media-breakpoint-down(xs)
+	.title1
+		font-size: 20px
+		line-height: 29px
+	.header-banner-title
+		text-align: center
+	.title3
+		font-size: 14px
+		line-height: 21px
+	.header-banner
+		margin-top: 0
+	.header-banner-descr
+		text-align: center
+	.header-banner-descr
+		margin-bottom: 0
+	body
+		font-size: 14px
+	.about
+		margin-top: 159px
+	.about::before
+		height: 140px
+		top: -140px
+	.contact-text
+		text-align: center
+	.form-contact
+		padding: 30px 10% 40px 10%
+	.contact, .collab, .reviews, .projects, .katalog, .find_out_cost, .advant
+		padding-top: 50px!important
+		.sect-title
+			margin-bottom: 35px!important
+/*==========  Mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+
+// ≤768px
++media-breakpoint-up(md)
+
+	
+// ≤992px
++media-breakpoint-up(lg)
+
+// ≤1200px
++media-breakpoint-up(xl)
+	.container-xl
+		max-width: 1240px
+		padding-right: 0px
+		padding-left: 0px
+	.about
+		&:before
+			background-image: url('../images/dest/background-about-to-xl.png')
+		&:after
+			background-image: url('../images/dest/background-about-bottom-xl.png')
